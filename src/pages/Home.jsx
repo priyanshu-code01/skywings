@@ -16,7 +16,7 @@ const Home = () => {
         const data = Array.isArray(res.data)
           ? res.data
           : res.data.flights || [];
-        setFeatured(data.slice(0, 3)); // Hard limit of 3 for Home
+        setFeatured(data.slice(0, 5));
       } catch (err) {
         console.error(err);
       }
