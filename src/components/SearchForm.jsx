@@ -5,17 +5,21 @@ import { MapPin, Calendar, Search, Loader2 } from "lucide-react";
 const SearchForm = ({ loading }) => {
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(""); // User interface ke liye date rahegi
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (!source || !destination || !date)
-      return alert("Please fill all fields");
 
-    // URL params ke saath search page par bhej rahe hain
+    // Sirf Source aur Destination mandatory rakhte hain
+    if (!source || !destination) {
+      return alert("Please enter both Source and Destination");
+    }
+
+    // URL params: Date bhej rahe hain taaki agar backend baad me use kare toh data ho,
+    // par backend abhi ise ignore karke saari flights dikha dega.
     navigate(
-      `/search?source=${source}&destination=${destination}&date=${date}`,
+      `/search?source=${source}&destination=${destination}${date ? `&date=${date}` : ""}`,
     );
   };
 
@@ -71,7 +75,7 @@ const SearchForm = ({ loading }) => {
             className="w-full bg-transparent text-white pl-12 pr-6 py-5 md:py-6 outline-none text-sm font-bold [color-scheme:dark] focus:bg-white/5 transition-all"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            required
+            // Required hata diya taaki agar koi date na dale toh bhi search ho sake
           />
         </div>
 
@@ -86,13 +90,15 @@ const SearchForm = ({ loading }) => {
           ) : (
             <>
               <Search size={20} />
-              <span className="md:hidden lg:inline">SEARCH</span>
+              <span className="md:hidden lg:inline uppercase">
+                Search Flights
+              </span>
             </>
           )}
         </button>
       </form>
 
-      {/* Quick Suggestions (Optional but looks premium) */}
+      {/* Quick Suggestions */}
       <div className="mt-4 flex flex-wrap justify-center gap-4">
         {["New York", "London", "Dubai", "Paris"].map((city) => (
           <button
