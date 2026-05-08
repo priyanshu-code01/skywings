@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { BookingContext } from "../context/BookingContext";
-import { AuthContext } from "../context/AuthContext"; // User details ke liye
+import { AuthContext } from "../context/AuthContext"; 
 import {
   Globe,
   User,
@@ -40,7 +40,7 @@ const Checkout = () => {
       ? selectedFlight?.businessPrice
       : selectedFlight?.economyPrice;
 
-  // Seat Selection Logic (Row 1-2 Business, baki Economy)
+  // Seat Selection Logic 
   const handleSeatClick = (row, col) => {
     const seatId = `${row}${col}`;
     setSelectedSeat(seatId);
@@ -161,7 +161,7 @@ const Checkout = () => {
 
         {/* RIGHT: DETAILS & SUMMARY */}
         <div className="flex-1 space-y-8">
-          {/* 1. Passenger Details (Auto-filled from Auth) */}
+          {/* 1. Passenger Details  */}
           <div className="bg-[#121A2F]/40 border border-gray-800 rounded-[2.5rem] p-10 relative overflow-hidden">
             <div className="absolute top-8 right-8 text-gray-800 opacity-20">
               <Globe size={80} />

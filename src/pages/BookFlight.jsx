@@ -74,7 +74,7 @@ const BookFlight = () => {
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-6 mt-12 flex flex-col lg:flex-row gap-12">
-        {/* LEFT: SEAT MAP (As per Screenshot 5) */}
+        {/* LEFT: SEAT MAP  */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}

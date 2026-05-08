@@ -5,7 +5,7 @@ export const BookingContext = createContext();
 export const BookingProvider = ({ children }) => {
   const [selectedFlight, setSelectedFlight] = useState(null);
   const [selectedSeat, setSelectedSeat] = useState(null);
-  const [seatClass, setSeatClass] = useState("Economy"); // Default
+  const [seatClass, setSeatClass] = useState("Economy"); 
 
   return (
     <BookingContext.Provider

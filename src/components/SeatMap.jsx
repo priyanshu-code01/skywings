@@ -6,7 +6,7 @@ const SeatMap = () => {
   const { selectedSeat, setSelectedSeat, seatClass, setSeatClass } =
     useContext(BookingContext);
 
-  // Rows and Columns as per Screenshot
+  // Rows and Columns 
   const rows = [1, 2, 3, 4, 5, 6];
   const leftCols = ["A", "B", "C"];
   const rightCols = ["D", "E", "F"];
@@ -92,7 +92,7 @@ const SeatMap = () => {
         ))}
       </div>
 
-      {/* Legend (Screenshot Style) */}
+      {/* Legend */}
       <div className="grid grid-cols-2 gap-y-4 gap-x-6 mt-16 w-full px-4">
         <LegendItem color="bg-gray-800" label="Taken" />
         <LegendItem color="border border-blue-500" label="Economy" />

@@ -5,19 +5,16 @@ import { MapPin, Calendar, Search, Loader2 } from "lucide-react";
 const SearchForm = ({ loading }) => {
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
-  const [date, setDate] = useState(""); // User interface ke liye date rahegi
+  const [date, setDate] = useState(""); 
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
 
-    // Sirf Source aur Destination mandatory rakhte hain
     if (!source || !destination) {
       return alert("Please enter both Source and Destination");
     }
 
-    // URL params: Date bhej rahe hain taaki agar backend baad me use kare toh data ho,
-    // par backend abhi ise ignore karke saari flights dikha dega.
     navigate(
       `/search?source=${source}&destination=${destination}${date ? `&date=${date}` : ""}`,
     );

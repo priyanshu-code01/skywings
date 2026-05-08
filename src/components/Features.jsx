@@ -1,6 +1,6 @@
 import React from "react";
 import { Wine, Globe, Headphones } from "lucide-react";
-import { motion } from "framer-motion"; // Animation ke liye
+import { motion } from "framer-motion";
 
 const Features = () => {
   return (

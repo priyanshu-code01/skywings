@@ -7,7 +7,7 @@ const FlightCard = ({ flight }) => {
 
   return (
     <div className="bg-[#121A2F]/50 backdrop-blur-xl border border-gray-800 rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row group transition-all hover:border-blue-500/50 mb-6">
-      {/* Flight Image Section (Backend se aayi hui image) */}
+      {/* Flight Image Section */}
       <div className="md:w-1/3 h-56 md:h-auto relative overflow-hidden">
         <img
           src={flight.image}

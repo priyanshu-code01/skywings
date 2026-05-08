@@ -1,13 +1,13 @@
 import React, { createContext, useReducer, useEffect } from "react";
 
-// 1. Initial State (Start me app ki condition kya hogi)
+// 1. Initial State
 const INITIAL_STATE = {
   user: JSON.parse(localStorage.getItem("user")) || null, // LocalStorage se user check karo
   loading: false,
   error: null,
 };
 
-// 2. Reducer Function (Ye decide karega ki state kaise change hogi)
+// 2. Reducer Function 
 const authReducer = (state, action) => {
   switch (action.type) {
     case "LOGIN_START":
@@ -26,7 +26,7 @@ const authReducer = (state, action) => {
 // 3. Create Context
 export const AuthContext = createContext();
 
-// 4. Provider Component (Jo poore app ko data dega)
+// 4. Provider Component
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 

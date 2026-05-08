@@ -12,7 +12,7 @@ import { AuthContext } from "./context/AuthContext";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import BookFlight from "./pages/BookFlight"; // Iska naam humne Checkout rakha tha, link yahan hai
+import BookFlight from "./pages/BookFlight"; 
 import Dashboard from "./pages/Dashboard";
 import SearchPage from "./pages/SearchPage";
 

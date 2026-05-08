@@ -64,7 +64,7 @@ const SearchPage = () => {
           </p>
         </div>
 
-        {/* Tumhara functional SearchForm component */}
+        {/* functional SearchForm component */}
         <div className="max-w-6xl mx-auto px-4">
           <SearchForm loading={loading} />
         </div>

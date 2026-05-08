@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import api from "../api/axios";
-import { useNavigate, Link } from "react-router-dom"; // 1. Link import kiya
-import { Plane, Mail, Lock, ArrowRight } from "lucide-react"; // Icons add kiye
-import { motion } from "framer-motion"; // Animation ke liye
+import { useNavigate, Link } from "react-router-dom"; 
+import { Plane, Mail, Lock, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Login = () => {
   const [email, setEmail] = useState("");

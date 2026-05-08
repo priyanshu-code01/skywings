@@ -9,7 +9,7 @@ const SearchResults = ({ flights }) => {
 
   const handleSelect = (flight) => {
     setSelectedFlight(flight);
-    navigate("/checkout"); // Seat selection page par bhej do
+    navigate("/checkout"); 
   };
 
   return (
@@ -25,7 +25,7 @@ const SearchResults = ({ flights }) => {
         </p>
       </div>
 
-      {/* Flight Card (Screenshot 4 Style) */}
+      {/* Flight Card */}
       <div className="space-y-6">
         {flights.map((flight) => (
           <div
